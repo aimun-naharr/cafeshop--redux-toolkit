@@ -6,8 +6,10 @@ import { getMeals } from "../redux/features/mealSlice";
 import { useGetMealQuery } from "../apiSlice";
 import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
-import BreakfastSection from "./BreakfastSection";
-import Blogs from "./Blogs";
+import BreakfastSection from "../components/BreakfastSection";
+import Blogs from "../components/Blogs";
+import MenuSection from "../components/MenuSection";
+
 
 const Home = () => {
         const {isLoading, data, isError}=useGetMealQuery()
@@ -24,6 +26,7 @@ const Home = () => {
                        <Banner/>
                       <BreakfastSection/>
                       <Blogs/>
+                      <MenuSection/>
                 </div>
         );
 };
