@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => {
  return (
-  <nav className='bg-white h-24 z-40 '>
+  <nav className='bg-black h-24 z-40 sticky top-0'>
    kk
    
   </nav>

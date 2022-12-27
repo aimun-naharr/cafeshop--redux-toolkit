@@ -21,7 +21,7 @@ const Home = () => {
 // dispatch(getMeals())
 //  },[])
         return (
-                <div  style={{backgroundImage: "url('https://i.ibb.co/sbm06W6/cafe1-1.jpg')",  backgroundSize:'cover'}} className='h-screen relative'>
+                <div  style={{backgroundImage: "url('https://i.ibb.co/sbm06W6/cafe1-1.jpg')",  backgroundSize:'cover',  backgroundRepeat: 'repeat-y'}} className='h-screen  '>
                        <Navbar/>
                        <Banner/>
                       <BreakfastSection/>

@@ -1,4 +1,5 @@
 import React from 'react';
+import ItemsContainer from './ItemsContainer';
 
 const MenuSection = () => {
      return (
@@ -7,13 +8,13 @@ const MenuSection = () => {
               <p>Our menu</p>
                <h1 className='text-5xl text-yellow-900 font-medium'>Special Menu</h1>
                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, asperiores! Dolores voluptates molestias ex minus atque similique consectetur blanditiis aspernatur?</p>
-               <nav className='flex gap-4 mt-8'>
+               {/* <nav className='flex gap-4 mt-8'>
                     <span className='text-2xl font-bold text-yellow-700 cursor-pointer'>Beverages</span>
                     <span className='text-2xl font-bold text-yellow-700 cursor-pointer'>Starter</span>
                     <span className='text-2xl font-bold text-yellow-700 cursor-pointer'>Breakfasts</span>
                     <span className='text-2xl font-bold text-yellow-700 cursor-pointer'>Desserts</span>
-               </nav>
-               
+               </nav> */}
+               <ItemsContainer/>
               </div>
           </section>
      );

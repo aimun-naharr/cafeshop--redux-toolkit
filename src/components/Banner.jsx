@@ -22,7 +22,7 @@ const Banner = () => {
                 <>
            <motion.section
 
-                className={` bg-white/75 h-screen flex items-center justify-center transition duration-150 ease-out ${isVisible && 'opacity-0'} `}>
+                className={` backdrop-blur-md bg-white/30 backdrop-brightness-125   flex items-center mb-4 justify-center transition duration-150 ease-out ${isVisible && 'opacity-0'} `}>
                         {/* section wrapper */}
                         <div className="grid grid-cols-12  gap-12 max-w-[1600px]">
                                 {/* left side */}
@@ -35,7 +35,7 @@ const Banner = () => {
                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt provident facilis facere quis, dolor consectetur maxime voluptatibus, laborum
                                                         mollitia, sed consequuntur minus nihil eligendi vitae quasi 
                                                 </p>
-                                                <button className=" bg-yellow-900 text-white py-6 px-12 mt-4">Reservation</button>
+                                                <button className=" bg-yellow-900 text-white py-4 px-8 mt-4 transition-all hover:-translate-y-1 hover:scale-110">Reservation</button>
                                         </div>
                                 </div>
                                 {/* right side */}

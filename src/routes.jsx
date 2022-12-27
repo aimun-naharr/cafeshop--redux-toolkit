@@ -26,15 +26,15 @@ const router = createBrowserRouter([
                 element: <Login/>,
         },
         {
-                path: "protected",
+                path: "admin",
                 element: <ProtectedRoute />,
                 children: [
                         {
-                                path: "dashboard",
+                                
                                 element: <Dashboard />,
                                 children: [
                                         {
-                                                path: 'add-product',
+                                                path: 'dashboard',
                                                 element: <AddProduct/>
                                         }
                                 ]

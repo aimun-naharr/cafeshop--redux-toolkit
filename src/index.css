@@ -5,4 +5,53 @@
 
 body{
  font-family: 'Cinzel', serif;
+ background-color: #FFFBF5;
+ overflow-x: hidden;
+}
+html{
+     scroll-behavior: smooth;
+}
+.breakfast-section::before{
+     content: 'Enjoy your day';
+     position: absolute;
+     top: 20%;
+     right: 0;
+     z-index: 99;
+     font-size: 40px;
+    color: gray;
+    height: 200px;
+    width: 200px;
+     background-color: #C07C08;
+     border-radius: 50%;
+}
+.breakfast-section::before{
+     content: '';
+     position: absolute;
+     top: -30%;
+     left: -10%;
+     z-index: 0;
+     font-size: 40px;
+    color: gray;
+    height: 200px;
+    width: 200px;
+     background-color: #C07C08;
+     border-radius: 50%;
+}
+.breakfast-section::after{
+     content: 'Enjoy your day';
+     position: absolute;
+     background-color: #5436035d;
+     height: 350px;
+     width: 350px;
+     border-radius: 50%;
+     bottom: 0;
+     right: -30%;
+     z-index: 99;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 14px;
+    color: white;
+     padding: 10px;
 }

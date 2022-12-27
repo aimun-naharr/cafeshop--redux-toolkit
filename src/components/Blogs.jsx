@@ -2,7 +2,7 @@ import React from "react";
 import pancake from "../assets/pancake.jpg";
 import coffee from "../assets/coffee.jpg";
 import coffee2 from "../assets/coffee2.jpg";
-
+import { motion } from "framer-motion"
 const Blogs = () => {
        
         return (
@@ -26,8 +26,19 @@ const Blogs = () => {
                                                                 <button className="text-yellow-900">Read more</button>
                                                         </div>
                                                 </div>
-                                                <div className="flex w-fit gap-4">
-                                                        <div className=" relative">
+                                                <motion.div initial={{
+                                                                opacity: 0,
+                                                                y: 100,
+                                                        }}
+                                                        whileInView={{
+                                                                y: 0,
+                                                                opacity:1
+                                                            }}
+                                                            transition={{
+                                                                duration:.5
+                                                            }} className="flex w-fit gap-4">
+                                                        <div 
+                                                         className=" relative">
                                                                 <img src={coffee2} alt="" className="h-56 aspect-square" />
                                                                 <span className="absolute top-0 right-0 bg-yellow-900 text-white py-2 px-4">02 February 2022</span>
                                                         </div>
@@ -38,7 +49,7 @@ const Blogs = () => {
                                                                 </p>
                                                                 <button className="text-yellow-900">Read more</button>
                                                         </div>
-                                                </div>
+                                                </motion.div>
                                         </div>
                                 </div>
                         </div>
