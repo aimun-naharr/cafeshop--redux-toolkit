@@ -5,6 +5,8 @@ import Filebase from "react-file-base64";
 
 import TextFieldWrapper from "../components/FormsUi/Textfield";
 import AutoComplete from "../components/FormsUi/Textfield/AutoComplete";
+import { useState } from "react";
+import ImageFile from "../components/FormsUi/Textfield/Imagefile";
 
 const initialStates = {
         name: "",
@@ -21,13 +23,16 @@ const formValidation = Yup.object().shape({
         image: Yup.string().required("Image is required"),
 });
 const AddProduct = () => {
+
+
         const handleSubmit = (values, actions) => {
+                console.log(values);
                 setTimeout(() => {
                         alert(JSON.stringify(values, null, 2));
                         actions.setSubmitting(false);
                 }, 1000);
         };
-        const getCategories = [{ name: "Beverages" }, { name: "Starter" }, { name: "Dessert" }];
+        const getCategories = [{ name: "Beverages" }, { name: "Starter" }, { name: "Dessert" }, {name: 'Other'}];
 
         return (
                 <div className="flex justify-center h-screen p-10 col-span-10 ">
@@ -36,7 +41,7 @@ const AddProduct = () => {
                                         <div className="col-span-12 grid grid-cols-12   w-full">
                                                 <div className="col-span-12 flex gap-4">
                                                         <TextFieldWrapper name="name" label="Product Name" />
-                                                        <Filebase type="file" multiple={false} onDone={({ base64 }) => setPostsData({ ...postsData, selectedFile: base64 })} />
+                                                        <ImageFile name='image' label='Image'/>
                                                 </div>
                                         </div>
                                         <div className="col-span-12 grid grid-cols-12 gap-4  w-full mt-4">

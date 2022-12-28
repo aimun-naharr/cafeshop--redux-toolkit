@@ -10,14 +10,14 @@ const AutoComplete = ({options, name, ...props  }) => {
                 const { value } = event.target;
                 setFieldValue(name, value);
         };
-        console.log(field);
+        
         const config = {
                 ...field,
                 ...props,
                 select: true,
                 fullWidth: true,
                 onchange: handleSelect,
-                variant: 'outlined'
+                
         };
 
         if (meta && meta.touched && meta.error) {
