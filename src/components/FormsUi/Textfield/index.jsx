@@ -4,14 +4,11 @@ import { useField } from 'formik';
 const TextFieldWrapper = ({name, ...otherProps}) => {
      
      const [field, meta]=useField(name)
-     console.log(field);
     
      const configTextField={
           ...field,
           ...otherProps,
-          fullWidth: true,
-       
-          
+          fullWidth: true
      }
      if(meta && meta.touched && meta.error){
           configTextField.error=true,

@@ -1,13 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import mealSlice from "./features/mealSlice";
+import apiSlice from "./apiSlice";
+
 import userSlice from "./features/userSlice";
-import { mealApi } from "../apiSlice";
+
 
 const store = configureStore({
       reducer:{
-        [ mealApi.reducerPath]: mealApi.reducer,
+        [ apiSlice.reducerPath]: apiSlice.reducer,
       },
        
-        middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(mealApi.middleware),
+        middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),
 });
 export default store;

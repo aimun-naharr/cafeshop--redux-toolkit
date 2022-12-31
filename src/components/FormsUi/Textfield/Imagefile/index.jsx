@@ -6,17 +6,17 @@ import Filebase from "react-file-base64";
 const ImageFile = ({name, ...props}) => {
      const [field, meta] = useField(name);
      const { setFieldValue } = useFormikContext();
-     const handleImageValue= ({base64}) => {
-             setFieldValue(name, base64);
+     const handleImageValue= ({base64:base64}) => {
+        console.log(base64);
+        // console.log('hello')
+        //      setFieldValue(name, base64);
      };
      
      const config = {
              ...field,
              ...props,
-           
              fullWidth: true,
              type: 'file',
-             
      };
 
      if (meta && meta.touched && meta.error) {
@@ -25,7 +25,7 @@ const ImageFile = ({name, ...props}) => {
      }
      return (
           <TextField {...config}>
-           <Filebase  multiple={false} onDone={handleImageValue} />
+           <Filebase multiple={false} onDone={handleImageValue} />
         </TextField>
      );
 };

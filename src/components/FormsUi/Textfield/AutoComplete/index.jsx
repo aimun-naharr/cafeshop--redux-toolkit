@@ -1,7 +1,7 @@
 import React from "react";
 import { Autocomplete } from "@mui/material";
 import { useField, useFormikContext } from "formik";
-import { TextField, MenuItem } from "@material-ui/core";
+import { TextField, MenuItem, InputLabel, Select } from "@material-ui/core";
 
 const AutoComplete = ({options, name, ...props  }) => {
         const [field, meta] = useField(name);
@@ -10,23 +10,22 @@ const AutoComplete = ({options, name, ...props  }) => {
                 const { value } = event.target;
                 setFieldValue(name, value);
         };
-        
+       
         const config = {
                 ...field,
                 ...props,
                 select: true,
                 fullWidth: true,
-                onchange: handleSelect,
-                
+                onChange: handleSelect
         };
 
         if (meta && meta.touched && meta.error) {
                 (config.error = true);
                  (config.helperText = meta.error);
         }
-        return <TextField {...config}>
+        return <TextField {...config} defaultValue='Beverages'>
           {
-               options.map((option, i)=><MenuItem key={i} value={option.name}>{option.name}</MenuItem>)
+               options?.map((option, i)=><MenuItem key={i}  value={option?.name? option.name : ''}>{option?.name || null}</MenuItem>)
           }
         </TextField>;
 };

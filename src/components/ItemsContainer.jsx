@@ -1,4 +1,5 @@
 import React from "react";
+import { useGetPoductQuery } from "../redux/features/productApiSlice";
 import ItemCard from "./ItemCard";
 
 const items = [
@@ -32,10 +33,14 @@ const items = [
         },
 ];
 const ItemsContainer = () => {
+        const {data ,isLoading, isError}=useGetPoductQuery()
+        console.log(data);
+        console.log(isLoading);
+        console.log(data);
         return (
                 <div className="flex gap-4 mt-8 mb-8 flex-wrap">
                         {
-                         items.map(item=><ItemCard item={item}/>)
+                         data?.map(item=><ItemCard item={item}/>)
                         }
                 </div>
         );

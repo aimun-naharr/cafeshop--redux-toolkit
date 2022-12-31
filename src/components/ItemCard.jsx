@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 const ItemCard = ({item}) => {
      const {name, category, image, price, description}=item
+     console.log(image);
      return (
           <motion.div initial={{
                opacity: 0,
@@ -18,9 +19,9 @@ const ItemCard = ({item}) => {
                <img src={image} alt="" />
                <div className='flex w-full items-center justify-between'>
                     <span>{name}</span>
-                    <span className='text-3xl text-yellow-800 '>${price}</span>
+                    <span className='text-3xl text-yellow-800 '>$15</span>
                </div>
-               <div className='text-left text-sm flex flex-col'><span className='text-yellow-900 font-sans'>{description}</span>
+               <div className='text-left text-sm flex flex-col'><span className='text-yellow-900 font-sans truncate'>{description}</span>
                <span className='text-xs'>Category: {category}</span></div>
                <div>
                     <button className='w-full bg-yellow-900 text-white rounded-lg py-2'>Add to Cart</button>
